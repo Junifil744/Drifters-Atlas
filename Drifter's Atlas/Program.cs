@@ -10,7 +10,7 @@ namespace Drifters_Atlas {
         [STAThread]
         public static unsafe void Main() {
             // Setup Window
-            Raylib.SetConfigFlags(ConfigFlags.ResizableWindow);
+            Raylib.SetConfigFlags(ConfigFlags.ResizableWindow | ConfigFlags.VSyncHint);
             Raylib.InitWindow(800, 480, "Drifter's Atlas");
             Raylib.SetWindowMinSize(490, 400);
             Raylib.SetWindowSize(
@@ -211,41 +211,41 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(-128, 420.5f), true, 8));
 
             // North Modules
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(50.5f, -241), true, mapModule, -1137428));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(45.5f, -343), false, mapModule, -1084059));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(18.5f, -409), false, mapModule, -767783));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(17.5f, -526), false, mapModule, -1047430));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-61.5f, -396), true, mapModule, -1895481));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-21.5f, -388), true, mapModule, -932471));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-30.5f, -468), true, mapModule, -902212));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(5.5f, -442), true, mapModule, -813235));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(50.5f, -241), true, mapModuleActive, -1137428));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(45.5f, -343), false, mapModuleActive, -1084059));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(18.5f, -409), false, mapModuleActive, -767783));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(17.5f, -526), false, mapModuleActive, -1047430));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-61.5f, -396), true, mapModuleActive, -1895481));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-21.5f, -388), true, mapModuleActive, -932471));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-30.5f, -468), true, mapModuleActive, -902212));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(5.5f, -442), true, mapModuleActive, -813235));
             // East Modules
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(423.5f, 70), true, mapModule, -255100));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(585.5f, 79), true, mapModule, -187905));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(560.5f, 170), true, mapModule, -167326));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(490.5f, -158), true, mapModule, -118694));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(424.5f, -85), false, mapModule, -18778));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(577.5f, 6), true, mapModule, -68841));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(591.5f, -100), false, mapModule, -53392));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(531.5f, -98), true, mapModule, -88709));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(423.5f, 70), true, mapModuleActive, -255100));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(585.5f, 79), true, mapModuleActive, -187905));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(560.5f, 170), true, mapModuleActive, -167326));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(490.5f, -158), true, mapModuleActive, -118694));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(424.5f, -85), false, mapModuleActive, -18778));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(577.5f, 6), true, mapModuleActive, -68841));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(591.5f, -100), false, mapModuleActive, -53392));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(531.5f, -98), true, mapModuleActive, -88709));
             // West Modules
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-439.5f, 51), true, mapModule, 266784));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-353.5f, 111), false, mapModule, 185267));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-300.5f, 81), true, mapModule, 101387));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-449.5f, 125), false, mapModule, 206139));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-534.5f, 172), true, mapModule, 335443));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-557.5f, 61), false, mapModule, 353953));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-580.5f, -27), true, mapModule, 403666));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-677.5f, -16), false, mapModule, 435082));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-439.5f, 51), true, mapModuleActive, 266784));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-353.5f, 111), false, mapModuleActive, 185267));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-300.5f, 81), true, mapModuleActive, 101387));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-449.5f, 125), false, mapModuleActive, 206139));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-534.5f, 172), true, mapModuleActive, 335443));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-557.5f, 61), false, mapModuleActive, 353953));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-580.5f, -27), true, mapModuleActive, 403666));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-677.5f, -16), false, mapModuleActive, 435082));
             // South Modules
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-21.5f, 488), true, mapModule, -416223));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-94.5f, 455), true, mapModule, -602007));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-105.5f, 424), true, mapModule, -596678));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-110.5f, 336), true, mapModule, -555279));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-157.5f, 471), true, mapModule, -676357));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(154.5f, 346), true, mapModule, -386457));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(109.5f, 355), true, mapModule, -398635));
-            spriteList.Add(new MapSprite(mapModuleActive, MapSprite.SpriteType.Module, new Vector2(-13.5f, 499), true, mapModule, -417825));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-21.5f, 488), true, mapModuleActive, -416223));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-94.5f, 455), true, mapModuleActive, -602007));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-105.5f, 424), true, mapModuleActive, -596678));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-110.5f, 336), true, mapModuleActive, -555279));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-157.5f, 471), true, mapModuleActive, -676357));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(154.5f, 346), true, mapModuleActive, -386457));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(109.5f, 355), true, mapModuleActive, -398635));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(-13.5f, 499), true, mapModuleActive, -417825));
 
             // Boss
             spriteList.Add(new MapSprite(mapBoss, MapSprite.SpriteType.Boss, new Vector2(639, -149), true, mapBossActive, 0, "noUG"));
@@ -1040,7 +1040,7 @@ namespace Drifters_Atlas {
         public int ID = 0;
         public string tag;
         public Texture2D sprite;
-        public Texture2D? altSprite;
+        public Texture2D? collectedSprite;
         public event collectibleClick onClick;
         public Vector2 localPosition;
         public Rectangle parentObject;
@@ -1050,11 +1050,11 @@ namespace Drifters_Atlas {
         public bool collected;
         public bool collectible = true;
 
-        public MapSprite(Texture2D tex, SpriteType sType, Vector2 pos, bool underground, Texture2D? altTex = null, int? id = null, string? tag = null) {
+        public MapSprite(Texture2D collectedTex, SpriteType sType, Vector2 pos, bool underground, Texture2D tex, int? id = null, string? tag = null) {
             ID = id ?? 0;
             type = sType;
             sprite = tex;
-            altSprite = altTex;
+            collectedSprite = collectedTex;
             localPosition = pos;
             this.tag = tag ?? string.Empty;
             this.underground = underground;
@@ -1065,10 +1065,18 @@ namespace Drifters_Atlas {
             type = sType;
             localPosition = pos;
             this.tag = tag ?? string.Empty;
+            // generation of grayscale
+            int[] invertTypes = new[] { 0, 1, 10 }; //ignore warp points, fu
+
             Image tmpImg = Raylib.ImageCopy(tex);
-            sprite = Raylib.LoadTextureFromImage(tmpImg);
             Raylib.ImageFormat(ref tmpImg, PixelFormat.UncompressedGrayAlpha);
-            altSprite = Raylib.LoadTextureFromImage(tmpImg);
+            if(invertTypes.Contains((int)type)) {
+                sprite = Raylib.LoadTextureFromImage(tmpImg);
+                collectedSprite = Raylib.LoadTextureFromImage(tex);
+            } else {
+                sprite = Raylib.LoadTextureFromImage(tex);
+                collectedSprite = Raylib.LoadTextureFromImage(tmpImg);
+            }
             Raylib.UnloadImage(tmpImg);
         }
 
@@ -1087,8 +1095,12 @@ namespace Drifters_Atlas {
         }
 
         public void Draw() {
-            if(collected) Raylib.DrawTextureEx(sprite, new Vector2(rect.X, rect.Y), 0, scale, Color.White);
-            else Raylib.DrawTextureEx(altSprite ?? sprite, new Vector2(rect.X, rect.Y), 0, scale, Color.White);
+            Color transparencyTint = new Color(255, 255, 255, 64);
+            int[] bannedTypes = new[] { 0, 1, 2, 5, 7, 10, 11, 12, 13 };
+
+            if(bannedTypes.Contains((int)type)) transparencyTint = Color.White;
+            if(collected) Raylib.DrawTextureEx(collectedSprite ?? sprite, new Vector2(rect.X, rect.Y), 0, scale, transparencyTint);
+            else Raylib.DrawTextureEx(sprite, new Vector2(rect.X, rect.Y), 0, scale, Color.White);
         }
         public delegate void collectibleClick();
     }
