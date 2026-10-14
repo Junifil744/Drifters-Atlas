@@ -55,10 +55,10 @@ You can contact me at:<br>
 - [ ] Keys added
 - [ ] Key doors added
 - [ ] Module doors added
-- [ ] Gearbits added (Dear christ)
+- [ ] Gearbits added (In the works!)
 
 ### Beta 1.0 (QoL Update)
-- [ ] Saving the user config and having a button to remove said config.
+- [ ] Saving the user config to app folder.
 - [ ] Adding the ghost/robot on the save load screen.
 - [ ] Interacting with collectibles.
 - [ ] Adding collectibles tips.
@@ -68,4 +68,6 @@ You can contact me at:<br>
 
 ### Release 1.0
 - [ ] Fixed miscellaneous issues
+- [ ] Adding a "recent saves" system
+- [ ] Adding that easter egg I shall not speak of
 - [ ] Debugged people's feedbacks
