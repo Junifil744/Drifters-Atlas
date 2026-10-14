@@ -65,6 +65,7 @@ You can contact me at:<br>
 - [ ] Finalizing the menu.
 - [ ] Drifter display on the map.
 - [ ] Live refreshing of the save, or having a button meant for it.
+- [ ] Scroll wheel for zoom
 
 ### Release 1.0
 - [ ] Adding a "recent saves" system
