@@ -67,7 +67,8 @@ You can contact me at:<br>
 - [ ] Live refreshing of the save, or having a button meant for it.
 
 ### Release 1.0
-- [ ] Fixed miscellaneous issues
 - [ ] Adding a "recent saves" system
+- [ ] Hold & Drag map movement system
 - [ ] Adding that easter egg I shall not speak of
+- [ ] Fixed miscellaneous issues
 - [ ] Debugged people's feedbacks
