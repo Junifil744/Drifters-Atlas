@@ -153,6 +153,7 @@ namespace Drifters_Atlas {
             Image mapCloakYellow = Raylib.LoadImage("Resources/spr_CloakFuchsia.png");
             Image mapGearbit = Raylib.LoadImage("Resources/spr_Gearbit.png");
             Image mapFightGearbit = Raylib.LoadImage("Resources/spr_FightGearbit.png");
+            Image mapBossGearbit = Raylib.LoadImage("Resources/spr_BossGearbit.png");
             
             // Controls
             List<MapSprite> spriteList = new List<MapSprite>();
