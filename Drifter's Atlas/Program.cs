@@ -570,7 +570,6 @@ namespace Drifters_Atlas {
 
                 #region Drawing things
                 Raylib.BeginDrawing();
-                Raylib.ClearBackground(Color.White);
 
                 // Draw the background if the map isn't meant to be drawn
                 if (currentMenu != 7 && currentMenu != 6) {
@@ -590,7 +589,7 @@ namespace Drifters_Atlas {
                 }
                 else if (currentMenu == 2) {
                     helpMenu.Draw();
-                    Raylib.DrawTextEx(menuFont, "Controls\nWASD/Arrow Keys = Move\nE/Numpad1 = Zoom In\nQ/Numpad2 = Zoom out\nR/Numpad3 = Go Underground\nESC = Show pause menu\n\nTHIS IS A VERY EARLY BUILD\nI'm open to any feedback\nYou can contact me at:\nMy Discord (Junifil)\nEmail (junifil@middlemouse.click)\n\nAlpha 0.4\nBuilt September 25 2025", new Vector2(menuRect.X + (20 * menuBoxScale), menuRect.Y + (10 * menuBoxScale)), fontSize * (menuBoxScale/2.5f), -2, Color.White);
+                    Raylib.DrawTextEx(menuFont, "Controls\nWASD/Arrow Keys = Move\nE/Numpad1 = Zoom In\nQ/Numpad2 = Zoom out\nR/Numpad3 = Go Underground\nESC = Show pause menu\n\nTHIS IS A VERY EARLY BUILD\nI'm open to any feedback\nYou can contact me at:\nMy Discord (Junifil)\nEmail (junifil@middlemouse.click)\n\nAlpha 0.4\nBuilt October 18 2026", new Vector2(menuRect.X + (20 * menuBoxScale), menuRect.Y + (10 * menuBoxScale)), fontSize * (menuBoxScale/2.5f), -2, Color.White);
                     // TODO: CHANGE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 }
                 else if (currentMenu == 3) {
@@ -924,10 +923,11 @@ namespace Drifters_Atlas {
                     parentMenu.rect.Height - 8,
                     parentMenu.rect.Height - 8
                 );
+                fontSize = (int)((parentMenu.rect.Height - 8) / 2.25);
                 if (state == 2) text = tertiaryToolTip;
                 else if (state == 1) text = enabledToolTip;
                 else text = disabledToolTip;
-                namePos = Raylib.MeasureTextEx(menuFont, text, fontSize / 2f, -2f);
+                namePos = Raylib.MeasureTextEx(menuFont, text, fontSize/2f, -2f);
                 textPos = new Vector2(Raylib.GetMousePosition().X + 30, Raylib.GetMousePosition().Y - namePos.Y/2);
             }
 
