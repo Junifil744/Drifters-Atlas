@@ -65,9 +65,11 @@ You can contact me at:<br>
 - [ ] Finalizing the menu.
 - [ ] Drifter display on the map.
 - [ ] Live refreshing of the save, or having a button meant for it.
+- [ ] Scroll wheel for zoom
 
 ### Release 1.0
-- [ ] Fixed miscellaneous issues
 - [ ] Adding a "recent saves" system
+- [ ] Hold & Drag map movement system
 - [ ] Adding that easter egg I shall not speak of
+- [ ] Fixed miscellaneous issues
 - [ ] Debugged people's feedbacks
