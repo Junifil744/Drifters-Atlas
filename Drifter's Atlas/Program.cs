@@ -115,6 +115,9 @@ namespace Drifters_Atlas {
             Texture2D cloakMarkerUG = Raylib.LoadTexture("Resources/mapControls/cloakMarkerUg.png");
             Texture2D cloakAny = Raylib.LoadTexture("Resources/mapControls/cloakAny.png");
             Texture2D cloakVisOff = Raylib.LoadTexture("Resources/mapControls/cloakVisOff.png");
+            Texture2D gearbitMarkerUG = Raylib.LoadTexture("Resources/mapControls/gearbitMarkerUg.png");
+            Texture2D gearbitAny = Raylib.LoadTexture("Resources/mapControls/gearbitAny.png");
+            Texture2D gearbitVisOff = Raylib.LoadTexture("Resources/mapControls/gearbitVisOff.png");
             
             Texture2D mapUgOff = Raylib.LoadTexture("Resources/mapControls/spr_MapLabIcon_0.png");
             Texture2D mapUgOn = Raylib.LoadTexture("Resources/mapControls/spr_MapLabIcon_1.png");
@@ -528,7 +531,7 @@ namespace Drifters_Atlas {
             Button gunVisibilityButton = new Button(4, gunVisOff, gunMarkerUG, ref mapMenu, mapButtonClick, 2, "Guns are hidden", "Guns can only be seen in their respective layer (above/underground)", "Guns can be seen in both layers") { terImage = gunAny };
             Button cloakVisibilityButton = new Button(5, cloakVisOff, cloakMarkerUG, ref mapMenu, mapButtonClick, 1, "Color Sets are hidden", "Color Sets can only be seen in their respective layer (above/underground)", "Color Sets can be seen in both layers") { terImage = cloakAny };
             
-            Button gearbitVisibilityButton = new Button(7, cloakVisOff, cloakMarkerUG, ref mapMenu, mapButtonClick, 1, "Gearbits are hidden", "Gearbits can only be seen in their respective layer (above/underground)", "Gearbits can be seen in both layers") { terImage = cloakAny };
+            Button gearbitVisibilityButton = new Button(7, gearbitVisOff, gearbitMarkerUG, ref mapMenu, mapButtonClick, 1, "Gearbits are hidden", "Gearbits can only be seen in their respective layer (above/underground)", "Gearbits can be seen in both layers") { terImage = gearbitAny };
 
             #endregion
 
