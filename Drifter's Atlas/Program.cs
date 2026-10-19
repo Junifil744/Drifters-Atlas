@@ -527,6 +527,8 @@ namespace Drifters_Atlas {
             Button monolithVisibilityButton = new Button(3, monolithVisOff, monolithMarkerUG, ref mapMenu, mapButtonClick, 1, "Monoliths are hidden", "Monoliths can only be seen in their respective layer (above/underground)", "Monoliths can be seen in both layers") { terImage = monolithAny };
             Button gunVisibilityButton = new Button(4, gunVisOff, gunMarkerUG, ref mapMenu, mapButtonClick, 2, "Guns are hidden", "Guns can only be seen in their respective layer (above/underground)", "Guns can be seen in both layers") { terImage = gunAny };
             Button cloakVisibilityButton = new Button(5, cloakVisOff, cloakMarkerUG, ref mapMenu, mapButtonClick, 1, "Color Sets are hidden", "Color Sets can only be seen in their respective layer (above/underground)", "Color Sets can be seen in both layers") { terImage = cloakAny };
+            
+            Button gearbitVisibilityButton = new Button(7, cloakVisOff, cloakMarkerUG, ref mapMenu, mapButtonClick, 1, "Gearbits are hidden", "Gearbits can only be seen in their respective layer (above/underground)", "Gearbits can be seen in both layers") { terImage = cloakAny };
 
             #endregion
 
@@ -945,12 +947,16 @@ namespace Drifters_Atlas {
                     if (sprite.type == MapSprite.SpriteType.Monolith && monolithVisibilityButton.state == 0) continue;
                     if (sprite.type == MapSprite.SpriteType.Gun && gunVisibilityButton.state == 0) continue;
                     if (sprite.type == MapSprite.SpriteType.ColorSet && cloakVisibilityButton.state == 0) continue;
+                    if (sprite.type == MapSprite.SpriteType.Gearbit && gearbitVisibilityButton.state == 0) continue;
+                    if (sprite.type == MapSprite.SpriteType.BossGearbit && gearbitVisibilityButton.state == 0) continue;
                     if (underground == sprite.underground || sprite.tag.Contains("noUG")
                         || (moduleVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.Module)
                         || (monolithVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.Monolith)
                         || (gunVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.Gun)
                         || (cloakVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.ColorSet)
-                    ) {
+                        || (gearbitVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.Gearbit)
+                        || (gearbitVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.BossGearbit)
+                    ) { // todo: end this madness
                         sprite.Draw();
                         if (debug) Raylib.DrawRectangleLinesEx(sprite.rect, 2 * (zoom / 10), Color.Purple);
                     }
