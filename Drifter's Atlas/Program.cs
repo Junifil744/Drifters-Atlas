@@ -260,7 +260,7 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapPistol, MapSprite.SpriteType.Gun, new Vector2(-145.5f, -126), true, 1)); // Pistol
             spriteList.Add(new MapSprite(mapZeliska, MapSprite.SpriteType.Gun, new Vector2(-688, -87.5f), false, 2)); // Zeliska
             spriteList.Add(new MapSprite(mapRailgun, MapSprite.SpriteType.Gun, new Vector2(8.5f, -500), true, 21)); // Railgun
-            spriteList.Add(new MapSprite(mapBlunderbuss, MapSprite.SpriteType.Gun, new Vector2(640, -133.5f), true, 43)); // Blunderbuss
+            spriteList.Add(new MapSprite(mapBlunderbuss, MapSprite.SpriteType.Gun, new Vector2(640, -137.5f), true, 43)); // Blunderbuss
             spriteList.Add(new MapSprite(mapDiamShotgun, MapSprite.SpriteType.Gun, new Vector2(388.5f, -185), true, 41)); // Diamond Shotgun
             spriteList.Add(new MapSprite(mapImpactRailgun, MapSprite.SpriteType.Gun, new Vector2(99.5f, 218.5f), true, 23)); // Impact Railgun
             
@@ -340,7 +340,7 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(8, -486), true, -805800));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(114, -396), true, -867435));
             // Boss gearbits
-            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(8, -509), true, 12110932));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(8, -509), true, 12110932));
             
             // East
             // Map gearbits
@@ -387,7 +387,7 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(617, -90), false, -53799));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(598, 76), true, -188000));
             // Boss gearbits
-            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(8, -509), true, 19543222));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(639, -129), true, 19543222));
             
             // South
             // Map gearbits
@@ -418,10 +418,10 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(97, 353), true, -477441));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(134, 336), true, -388544));
             // Boss gearbits
-            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-25, 500), true, 15051972));
-            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-109, 353), true, 14363902));
-            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-3, 459), true, 15720772));
-            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(157, 289), true, 16436762));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(-25, 500), true, 15051972));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(-109, 353), true, 14363902));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(-3, 459), true, 15720772));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(157, 289), true, 16436762));
             
             // West
             // Map gearbits
@@ -470,7 +470,7 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-621, -36), false, 422827));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-508, 94), false, 295690));
             // Boss gearbits
-            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-688, -78), false, 24527052));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(-688, -78), false, 24527052));
             #endregion
 
             // Load font
@@ -723,6 +723,10 @@ namespace Drifters_Atlas {
                             sprite.collected = ((string)parseSave(currentSave, "sc")).Contains(sprite.ID.ToString());
                         } else if (sprite.type == MapSprite.SpriteType.ColorSet) {
                             sprite.collected = ((string)parseSave(currentSave, "cCapes")).Contains(sprite.ID.ToString());
+                        } else if (sprite.type == MapSprite.SpriteType.Gearbit) {
+                            sprite.collected = parseCL(currentSave, 0).Contains(sprite.ID.ToString());
+                        } else if (sprite.type == MapSprite.SpriteType.BossGearbit) {
+                            sprite.collected = ((string)parseSave(currentSave, "bossGearbits")).Contains(sprite.ID.ToString());
                         }
 
                         sprite.scale = zoom;
