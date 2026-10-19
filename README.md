@@ -1,6 +1,9 @@
 # Drifter's Atlas
 An Interactive Map for Hyper Light Drifter
 
+# Gearbit Addition Branch
+Gearbit progress: 99/186 (53.2%)
+
 # How to use it
 You can open it, it'll automatically read the save files from your AppData folder.<br>
 Or, you could simply drag and drop your own file and it will read it just as fine.<br>
