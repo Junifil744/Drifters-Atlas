@@ -465,7 +465,7 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-297, 14), false, 115024));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-366, 24), false, 145250));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-375, 83), false, -1781415));
-            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 45), false, 265682));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 45), true, 265682));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 56), true, 261520));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-621, -36), false, 422827));
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-508, 94), false, 295690));
