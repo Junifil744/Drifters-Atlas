@@ -1,9 +1,6 @@
 # Drifter's Atlas
 An Interactive Map for Hyper Light Drifter
 
-# Gearbit Addition Branch
-Gearbit progress: 136/186 (73.1%)
-
 # How to use it
 You can open it, it'll automatically read the save files from your AppData folder.<br>
 Or, you could simply drag and drop your own file and it will read it just as fine.<br>
@@ -58,7 +55,7 @@ You can contact me at:<br>
 - [ ] Keys added
 - [ ] Key doors added
 - [ ] Module doors added
-- [ ] Gearbits added (In the works!)
+- [X] Gearbits added
 
 ### Beta 1.0 (QoL Update)
 - [ ] Saving the user config to app folder.
