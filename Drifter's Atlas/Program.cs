@@ -410,6 +410,18 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(136, 323), true, -374065));
             spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(144, 313), true, -368661));
             spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(85, 319), false, -693856));
+            // Fight gearbits
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-67, 469), true, -526738));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-129, 472), true, -604612));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(79, 398), true, -454506));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(54, 424), true, -1844720));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(97, 353), true, -477441));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(134, 336), true, -388544));
+            // Boss gearbits
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-25, 500), true, 15051972));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-109, 353), true, 14363902));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-3, 459), true, 15720772));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(157, 289), true, 16436762));
             #endregion
 
             // Load font

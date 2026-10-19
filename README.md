@@ -2,7 +2,7 @@
 An Interactive Map for Hyper Light Drifter
 
 # Gearbit Addition Branch
-Gearbit progress: 99/186 (53.2%)
+Gearbit progress: 136/186 (73.1%)
 
 # How to use it
 You can open it, it'll automatically read the save files from your AppData folder.<br>
