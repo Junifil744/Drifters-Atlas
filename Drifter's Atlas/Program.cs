@@ -422,6 +422,55 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-109, 353), true, 14363902));
             spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-3, 459), true, 15720772));
             spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(157, 289), true, 16436762));
+            
+            // West
+            // Map gearbits
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-238, 72), false, 91880));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-295, 1), false, 111315));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-309, 65), false, 124387));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-328, -24), false, 133144));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-383, 60), false, 147331)); // 5
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-367, -14), false, 152754));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-380, 106), false, 181173));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-383, 113), false, 184112));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-436, 84), true, 253495));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-456, 85), true, 252704)); // 10
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 36), true, 267135));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-441, 36), true, 267632));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-480, 55), true, 274061));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-555, -7), false, 382035));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-595, -62), false, 396517)); // 15
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-624, -62), false, -1758191));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-630, -72), false, 413196));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-622, -46), false, 421970));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-648, -42), false, 426114));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-655, -15), false, 427411)); // 20
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-627, 8), false, 421525));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-689, -1), false, 436752));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-703, -36), false, 446178));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-670, -127), false, 466844));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-470, 102), false, 292939)); // 25
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-462, 140), false, 301070));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-480, 150), false, 306586));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-528, 124), false, 312126));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-554, 153), false, 316015));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-586, 134), true, 325917)); // 30
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-550, 187), true, 333365));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-550, 152), true, 337456));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-547, 81), false, 342221));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-575, 96), false, -1997651));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-445, 170), false, -1977727)); // 35
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-436, 192), false, 227097));
+            // Fight gearbits
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-297, 14), false, 115024));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-366, 24), false, 145250));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-375, 83), false, -1781415));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 45), false, 265682));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 56), true, 261520));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-621, -36), false, 422827));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-508, 94), false, 295690));
+            // Boss gearbits
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-688, -78), false, 24527052));
             #endregion
 
             // Load font
