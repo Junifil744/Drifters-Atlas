@@ -1115,7 +1115,7 @@ namespace Drifters_Atlas {
                 );
             } else if(type == ButtonType.Map) {
                 rect = new Rectangle(
-                    parentMenu.rect.X + (parentMenu.rect.Height - 6) * ID + 4,
+                    parentMenu.rect.X + ((parentMenu.rect.Height - 6) * ID) + 4,
                     parentMenu.rect.Y + 4,
                     parentMenu.rect.Height - 8,
                     parentMenu.rect.Height - 8
@@ -1197,8 +1197,8 @@ namespace Drifters_Atlas {
                     rect.Width / image.Width,
                     rect.Height / image.Height
                 );
-                Color tint = Color.White;
-                if (hovering) tint = new Color(200, 200, 200);
+                Color tint = new Color(200, 200, 200);
+                if (!hovering) tint = Color.White;
 
                 if (state == 1) Raylib.DrawTextureEx(altImage, new Vector2(rect.X, rect.Y), 0, scale, tint);
                 else if (state == 2) Raylib.DrawTextureEx(terImage, new Vector2(rect.X, rect.Y), 0, scale, tint);
@@ -1359,16 +1359,6 @@ namespace Drifters_Atlas {
             
             foreach (var button in buttonList) {
                 button.Update();
-            }
-            
-            // todo, change to a while
-            if (type == MenuType.Map && buttonList.Count * buttonList[0].rect.Width > rect.Width) {
-                // okay so if.. if the amount of buttons * their size is larger than the menu, double the height of the menu
-                // so you need to process the buttons beforehand.
-                // but then when it comes to telling the buttons to change their position to match this.. you cant because you already processed them
-                // so what the FUCK do i even do???
-                rect.Y -= rect.Height;
-                rect.Height *= 2;
             }
         }
 
