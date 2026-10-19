@@ -151,6 +151,9 @@ namespace Drifters_Atlas {
             Image mapCloakPurple = Raylib.LoadImage("Resources/spr_CloakPurple.png");
             Image mapCloakWhite = Raylib.LoadImage("Resources/spr_CloakWhite.png");
             Image mapCloakYellow = Raylib.LoadImage("Resources/spr_CloakFuchsia.png");
+            Image mapGearbit = Raylib.LoadImage("Resources/spr_Gearbit.png");
+            Image mapFightGearbit = Raylib.LoadImage("Resources/spr_FightGearbit.png");
+            Image mapBossGearbit = Raylib.LoadImage("Resources/spr_BossGearbit.png");
             
             // Controls
             List<MapSprite> spriteList = new List<MapSprite>();
@@ -207,11 +210,11 @@ namespace Drifters_Atlas {
             // South Monoliths
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(-25, 302.5f), false, 5));
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(97, 365.5f), true, 6));
-            spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(-73, 434.5f), true, 7));
+            spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(-70, 430.5f), true, 7));
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(-128, 420.5f), true, 8));
 
             // North Modules
-            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(50.5f, -241), true, mapModuleActive, -1137428));
+            spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(52.5f, -247), true, mapModuleActive, -1137428));
             spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(45.5f, -343), false, mapModuleActive, -1084059));
             spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(18.5f, -409), false, mapModuleActive, -767783));
             spriteList.Add(new MapSprite(mapModule, MapSprite.SpriteType.Module, new Vector2(17.5f, -526), false, mapModuleActive, -1047430));
@@ -273,6 +276,201 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapCloakOchre, MapSprite.SpriteType.ColorSet, new Vector2(-149, -209), false, 9));
             spriteList.Add(new MapSprite(mapCloakPurple, MapSprite.SpriteType.ColorSet, new Vector2(9.5f, -14), false, 10));
             
+            // GEARBITS!! WOAG
+            // Center
+            // Map gearbits
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-3, -18), false, -1324377));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(22, -35), false, -1938018));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(54, -5), false, -1387712));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(34, 100), false, -1386474));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(15, -58), false, -1372159));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(24, -100), false, -1937851));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(78, 56), false, -1935475));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(105, -6), false, -1353566));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(12, 149), false, -1363522));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-41, 192), false, -1363871));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-175, 52), false, -1347639));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-160, -208), false, -1465613));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-84, 101), false, -1283621));
+            
+            // North
+            // Map gearbits
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(14, -216), false, -1915296));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-9, -212), false, -1153846));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(44, -250), true, -1133350));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(54, -237), true, -1138373));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(35, -260), false, -1914165));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-3, -299), false, -1126743));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-3, -291), false, -1123612));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(88, -283), false, -1102820));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(100, -282), false, -1102059));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(84, -348), false, -1096923));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(46, -379), false, -1095173));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(27, -427), false, -1066018));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-2, -404), false, -1066739));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-9, -448), false, -1052014));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-27, -422), false, -1036027));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-49, -424), true, -995622));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-62, -382), true, -956949));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-13, -372), true, -934767));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-9, -408), true, -928455));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(3, -410), true, -826553));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(16, -476), true, -806721));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(13, -439), true, -816405));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(0, -488), true, -805940));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(50, -486), false, -1016165));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(67, -414), true, -882399));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(74, -429), true, -876954));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(65, -429), true, -874835));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(74, -436), true, -1887473));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(108, -407), true, -862569));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(110, -436), true, -852962));
+            // Fight gearbits
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(19, -244), false, -1146497));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(32, -397), true, -1078558));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(32, -389), true, -1907892));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(9, -437), false, -1065935));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-73, -428), true, -997450));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-50, -370), true, -967035));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-49, -400), true, -952463));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-13, -392), true, -932637));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-6, -436), true, -917792));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-15, -462), true, -907251));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(13, -445), true, -1881891));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(8, -486), true, -805800));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(114, -396), true, -867435));
+            // Boss gearbits
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(8, -509), true, 12110932));
+            
+            // East
+            // Map gearbits
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(209, 52), false, -282324));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(202, -24), false, -287608));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(358, 16), false, -272376));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(421, -2), false, -278035));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(488, -20), false, -242695));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(625, 72), true, -186145));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(631, 93), true, -188270));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(581, 94), true, -188863));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(544, 127), true, -173339));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(544, 157), true, -166352));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(544, 166), true, -163733));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(544, 141), false, -1814353));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(475, 148), false, -144178));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(421, -38), true, -123999));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(413, -30), true, -1812282));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(441, -30), true, -123225));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(508, -156), true, -1811089));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(506, -149), true, -112110));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(474, -229), false, -107235));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(562, -157), false, -95695));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(508, -61), false, -94934));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(510, -1), true, -216030));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(516, -10), true, -218193));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(560, 13), true, -66942));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(594, -8), true, -66957));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(586, -4), true, -63768));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(570, -1), true, -66916));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(624, -90), false, -57427));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(577, -60), false, -53992));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(414, -78), false, -18775));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(370, -158), true, -8152));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(378, -158), true, -5448));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(409, -171), true, -6403));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(379, -190), true, 2564));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(468, -23), false, -248670));
+            // Fight gearbits
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(620, 93), true, -1818059));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(567, 132), true, -172543));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(567, 13), true, -68604));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(574, 13), true, -67920));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(617, -90), false, -53799));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(598, 76), true, -188000));
+            // Boss gearbits
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(8, -509), true, 19543222));
+            
+            // South
+            // Map gearbits
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-39, 284), false, -704869));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-79, 442), true, -1852747));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-39, 529), true, -1851787));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-20, 474), true, -414219));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-102, 473), true, -602282));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-104, 438), true, -602430));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-95, 393), true, -596335));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-130, 373), true, -575080));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-52, 319), false, -693122));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(90, 381), true, -458257));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(102, 393), true, -455008));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(68, 433), true, -1844346));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(124, 338), true, -396006));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(124, 355), true, -396384));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(147, 335), true, -1838715));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(138, 348), true, -387472));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(136, 323), true, -374065));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(144, 313), true, -368661));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(85, 319), false, -693856));
+            // Fight gearbits
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-67, 469), true, -526738));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-129, 472), true, -604612));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(79, 398), true, -454506));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(54, 424), true, -1844720));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(97, 353), true, -477441));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(134, 336), true, -388544));
+            // Boss gearbits
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-25, 500), true, 15051972));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-109, 353), true, 14363902));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-3, 459), true, 15720772));
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(157, 289), true, 16436762));
+            
+            // West
+            // Map gearbits
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-238, 72), false, 91880));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-295, 1), false, 111315));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-309, 65), false, 124387));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-328, -24), false, 133144));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-383, 60), false, 147331)); // 5
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-367, -14), false, 152754));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-380, 106), false, 181173));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-383, 113), false, 184112));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-436, 84), true, 253495));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-456, 85), true, 252704)); // 10
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 36), true, 267135));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-441, 36), true, 267632));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-480, 55), true, 274061));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-555, -7), false, 382035));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-595, -62), false, 396517)); // 15
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-624, -62), false, -1758191));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-630, -72), false, 413196));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-622, -46), false, 421970));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-648, -42), false, 426114));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-655, -15), false, 427411)); // 20
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-627, 8), false, 421525));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-689, -1), false, 436752));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-703, -36), false, 446178));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-670, -127), false, 466844));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-470, 102), false, 292939)); // 25
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-462, 140), false, 301070));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-480, 150), false, 306586));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-528, 124), false, 312126));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-554, 153), false, 316015));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-586, 134), true, 325917)); // 30
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-550, 187), true, 333365));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-550, 152), true, 337456));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-547, 81), false, 342221));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-575, 96), false, -1997651));
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-445, 170), false, -1977727)); // 35
+            spriteList.Add(new MapSprite(mapGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-436, 192), false, 227097));
+            // Fight gearbits
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-297, 14), false, 115024));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-366, 24), false, 145250));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-375, 83), false, -1781415));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 45), false, 265682));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-450, 56), true, 261520));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-621, -36), false, 422827));
+            spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-508, 94), false, 295690));
+            // Boss gearbits
+            spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-688, -78), false, 24527052));
             #endregion
 
             // Load font
@@ -658,7 +856,7 @@ namespace Drifters_Atlas {
                     backButton.Draw();
                 }
                 Vector2 mouseMap = (Raylib.GetMousePosition() - windowCenter) / zoom - mapPos - new Vector2(mapTex.Width / 2f, mapTex.Height / 2f);
-                if (debug) Raylib.DrawText($"currentMenu: {currentMenu}\n\nMap: {mapPos.X},{mapPos.Y}\nIncrement: {moveIncrement}\nZoom: {zoom}\nScreenCenter: {windowCenter}\n\nMouse\n{mouseMap}\n\n{backButton.ID}\n\n{windowHeight},{windowWidth}", 0, 0, 20, Color.Pink);
+                if (debug) Raylib.DrawText($"FPS: {Raylib.GetFPS()}\n\ncurrentMenu: {currentMenu}\n\nMap: {mapPos.X},{mapPos.Y}\nIncrement: {moveIncrement}\nZoom: {zoom}\nScreenCenter: {windowCenter}\n\nMouse\n{mouseMap}\n\n{backButton.ID}\n\n{windowHeight},{windowWidth}", 0, 0, 20, Color.Pink);
                 Raylib.EndDrawing();
                 #endregion
             }
@@ -727,8 +925,7 @@ namespace Drifters_Atlas {
                     backButton.ID = 99;
                 }
             }
-            void mapButtonClick(Button sender, int ID)
-            {
+            void mapButtonClick(Button sender, int ID) {
                 if (ID == 0) underground = !underground;
                 if(ID >= 2 && sender.state == 2) sender.state = 0;
                 else if (ID < 2 && sender.state == 1) sender.state = 0;
@@ -1033,7 +1230,9 @@ namespace Drifters_Atlas {
 
             AbyssCenter = 11,
             AbyssModule = 12,
-            AbyssPillar = 13
+            AbyssPillar = 13,
+            
+            BossGearbit = 14
         }
         public Rectangle rect;
         public SpriteType type;
@@ -1096,7 +1295,7 @@ namespace Drifters_Atlas {
 
         public void Draw() {
             Color transparencyTint = new Color(255, 255, 255, 64);
-            int[] bannedTypes = new[] { 0, 1, 2, 5, 7, 10, 11, 12, 13 };
+            int[] bannedTypes = new[] { 0, 1, 2, 7, 10, 11, 12, 13 };
 
             if(bannedTypes.Contains((int)type)) transparencyTint = Color.White;
             if(collected) Raylib.DrawTextureEx(collectedSprite ?? sprite, new Vector2(rect.X, rect.Y), 0, scale, transparencyTint);
