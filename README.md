@@ -73,3 +73,7 @@ You can contact me at:<br>
 - [ ] Adding that easter egg I shall not speak of
 - [ ] Fixed miscellaneous issues
 - [ ] Debugged people's feedbacks
+
+# AI Disclosure
+This project does not use AI.<br>
+Fuck AI.
