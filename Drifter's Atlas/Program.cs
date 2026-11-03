@@ -118,6 +118,9 @@ namespace Drifters_Atlas {
             Texture2D gearbitMarkerUG = Raylib.LoadTexture("Resources/mapControls/gearbitMarkerUg.png");
             Texture2D gearbitAny = Raylib.LoadTexture("Resources/mapControls/gearbitAny.png");
             Texture2D gearbitVisOff = Raylib.LoadTexture("Resources/mapControls/gearbitVisOff.png");
+            Texture2D keyMarkerUG = Raylib.LoadTexture("Resources/mapControls/keyMarkerUg.png");
+            Texture2D keyAny = Raylib.LoadTexture("Resources/mapControls/keyAny.png");
+            Texture2D keyVisOff = Raylib.LoadTexture("Resources/mapControls/keyVisOff.png");
             
             Texture2D mapUgOff = Raylib.LoadTexture("Resources/mapControls/spr_MapLabIcon_0.png");
             Texture2D mapUgOn = Raylib.LoadTexture("Resources/mapControls/spr_MapLabIcon_1.png");
@@ -157,6 +160,7 @@ namespace Drifters_Atlas {
             Image mapGearbit = Raylib.LoadImage("Resources/spr_Gearbit.png");
             Image mapFightGearbit = Raylib.LoadImage("Resources/spr_FightGearbit.png");
             Image mapBossGearbit = Raylib.LoadImage("Resources/spr_BossGearbit.png");
+            Image mapKey = Raylib.LoadImage("Resources/spr_Key.png");
             
             // Controls
             List<MapSprite> spriteList = new List<MapSprite>();
@@ -474,6 +478,31 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapFightGearbit, MapSprite.SpriteType.Gearbit, new Vector2(-508, 94), false, 295690));
             // Boss gearbits
             spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(-688, -78), false, 24527052));
+            
+            
+            // Keys
+            // Center
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-168, -210.5f), false, -1994673));
+            // North
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-59, -419.5f), true, -1899835));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(36, -388.5f), true, -1072767));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(115, -407.5f), true, -865097));
+            // East
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(521, -244.5f), false, -105598));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(537, 129.5f), false, -1981421));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(586, 4.5f), true, -63337));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(456, -27.5f), true, -124132));
+            // South
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-29, 284.5f), false, -708690));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-130, 362.5f), true, -1857058));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-75, 538.5f), true, -514983));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(47, 465.5f), true, -446384));
+            // West
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-595, 10.5f), false, -1761760));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-616, 6.5f), false, -1757464));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-515, 74.5f), false, 294991));
+            spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-458, 92.5f), true, 255887));
+            
             #endregion
 
             // Load font
@@ -530,7 +559,7 @@ namespace Drifters_Atlas {
             Button monolithVisibilityButton = new Button(3, monolithVisOff, monolithMarkerUG, ref mapMenu, mapButtonClick, 1, "Monoliths are hidden", "Monoliths can only be seen in their respective layer (above/underground)", "Monoliths can be seen in both layers") { terImage = monolithAny };
             Button gunVisibilityButton = new Button(4, gunVisOff, gunMarkerUG, ref mapMenu, mapButtonClick, 2, "Guns are hidden", "Guns can only be seen in their respective layer (above/underground)", "Guns can be seen in both layers") { terImage = gunAny };
             Button cloakVisibilityButton = new Button(5, cloakVisOff, cloakMarkerUG, ref mapMenu, mapButtonClick, 1, "Color Sets are hidden", "Color Sets can only be seen in their respective layer (above/underground)", "Color Sets can be seen in both layers") { terImage = cloakAny };
-            
+            Button keyVisibilityButton = new Button(6, keyVisOff, keyMarkerUG, ref mapMenu, mapButtonClick, 1, "Keys are hidden", "Keys can only be seen in their respective layer (above/underground)", "Keys can be seen in both layers") { terImage = keyAny };
             Button gearbitVisibilityButton = new Button(7, gearbitVisOff, gearbitMarkerUG, ref mapMenu, mapButtonClick, 1, "Gearbits are hidden", "Gearbits can only be seen in their respective layer (above/underground)", "Gearbits can be seen in both layers") { terImage = gearbitAny };
 
             #endregion
@@ -732,6 +761,8 @@ namespace Drifters_Atlas {
                             sprite.collected = parseCL(currentSave, 0).Contains(sprite.ID.ToString());
                         } else if (sprite.type == MapSprite.SpriteType.BossGearbit) {
                             sprite.collected = ((string)parseSave(currentSave, "bossGearbits")).Contains(sprite.ID.ToString());
+                        } else if (sprite.type == MapSprite.SpriteType.Key) {
+                            sprite.collected = parseCL(currentSave, 2).Contains(sprite.ID.ToString());
                         }
 
                         sprite.scale = zoom;
@@ -952,6 +983,7 @@ namespace Drifters_Atlas {
                     if (sprite.type == MapSprite.SpriteType.ColorSet && cloakVisibilityButton.state == 0) continue;
                     if (sprite.type == MapSprite.SpriteType.Gearbit && gearbitVisibilityButton.state == 0) continue;
                     if (sprite.type == MapSprite.SpriteType.BossGearbit && gearbitVisibilityButton.state == 0) continue;
+                    if (sprite.type == MapSprite.SpriteType.Key && keyVisibilityButton.state == 0) continue;
                     if (underground == sprite.underground || sprite.tag.Contains("noUG")
                         || (moduleVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.Module)
                         || (monolithVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.Monolith)
@@ -959,6 +991,7 @@ namespace Drifters_Atlas {
                         || (cloakVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.ColorSet)
                         || (gearbitVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.Gearbit)
                         || (gearbitVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.BossGearbit)
+                        || (keyVisibilityButton.state == 2 && sprite.type == MapSprite.SpriteType.Key)
                     ) { // todo: end this madness
                         sprite.Draw();
                         if (debug) Raylib.DrawRectangleLinesEx(sprite.rect, 2 * (zoom / 10), Color.Purple);

@@ -52,7 +52,7 @@ You can contact me at:<br>
 
 ### Alpha 0.4 (Collectibles Update)
 - [X] Color sets added
-- [ ] Keys added
+- [X] Keys added
 - [ ] Key doors added
 - [ ] Module doors added
 - [X] Gearbits added
