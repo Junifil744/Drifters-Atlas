@@ -161,6 +161,16 @@ namespace Drifters_Atlas {
             Image mapFightGearbit = Raylib.LoadImage("Resources/spr_FightGearbit.png");
             Image mapBossGearbit = Raylib.LoadImage("Resources/spr_BossGearbit.png");
             Image mapKey = Raylib.LoadImage("Resources/spr_Key.png");
+            Image keyDoor1 = Raylib.LoadImage("Resources/spr_KeyDoor1.png");
+            Image keyDoor3 = Raylib.LoadImage("Resources/spr_KeyDoor3.png");
+            Image keyDoor4 = Raylib.LoadImage("Resources/spr_KeyDoor4.png");
+            Image keyDoor8 = Raylib.LoadImage("Resources/spr_KeyDoor8.png");
+            Image keyDoor10 = Raylib.LoadImage("Resources/spr_KeyDoor10.png");
+            Image keyDoor12 = Raylib.LoadImage("Resources/spr_KeyDoor12.png");
+            Image keyDoor16 = Raylib.LoadImage("Resources/spr_KeyDoor16.png");
+            Image moduleDoor1 = Raylib.LoadImage("Resources/spr_ModuleDoor1.png");
+            Image moduleDoor3 = Raylib.LoadImage("Resources/spr_ModuleDoor3.png");
+            Image moduleDoor8 = Raylib.LoadImage("Resources/spr_ModuleDoor8.png");
             
             // Controls
             List<MapSprite> spriteList = new List<MapSprite>();
@@ -198,7 +208,23 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapWarpZone, MapSprite.SpriteType.Warp, new Vector2(-432.5f, 93), false, 2));
             spriteList.Add(new MapSprite(mapWarpZone, MapSprite.SpriteType.Warp, new Vector2(-39.5f, 359), false, 3));
             spriteList.Add(new MapSprite(mapWarpZone, MapSprite.SpriteType.Warp, new Vector2(501.5f, 1), false, 4));
-
+                        
+            // Key doors
+            // East
+            spriteList.Add(new MapSprite(keyDoor1, MapSprite.SpriteType.KeyDoor, new Vector2(552.5f, 126), true, 0));
+            spriteList.Add(new MapSprite(keyDoor3, MapSprite.SpriteType.KeyDoor, new Vector2(578.5f, -2), true, 1));
+            spriteList.Add(new MapSprite(keyDoor8, MapSprite.SpriteType.KeyDoor, new Vector2(414.5f, -49), true, 2));
+            // West
+            spriteList.Add(new MapSprite(keyDoor3, MapSprite.SpriteType.KeyDoor, new Vector2(-347.5f, -3), false, 3));
+            spriteList.Add(new MapSprite(keyDoor4, MapSprite.SpriteType.KeyDoor, new Vector2(-642.5f, 5), false, 4));
+            spriteList.Add(new MapSprite(keyDoor12, MapSprite.SpriteType.KeyDoor, new Vector2(-564.5f, 133), false, 5));
+            // North
+            spriteList.Add(new MapSprite(keyDoor10, MapSprite.SpriteType.KeyDoor, new Vector2(-0.5f, -261), false, 6));
+            // Central
+            spriteList.Add(new MapSprite(keyDoor12, MapSprite.SpriteType.KeyDoor, new Vector2(32.5f, 89), false, 7));
+            // South
+            spriteList.Add(new MapSprite(keyDoor16, MapSprite.SpriteType.KeyDoor, new Vector2(-69.5f, 446), true, 8));
+            
             // North Monoliths
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(27, -214.5f), false, 1));
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(110, -283.5f), false, 2));
@@ -479,7 +505,6 @@ namespace Drifters_Atlas {
             // Boss gearbits
             spriteList.Add(new MapSprite(mapBossGearbit, MapSprite.SpriteType.BossGearbit, new Vector2(-688, -78), false, 24527052));
             
-            
             // Keys
             // Center
             spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-168, -210.5f), false, -1994673));
@@ -502,6 +527,8 @@ namespace Drifters_Atlas {
             spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-616, 6.5f), false, -1757464));
             spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-515, 74.5f), false, 294991));
             spriteList.Add(new MapSprite(mapKey, MapSprite.SpriteType.Key, new Vector2(-458, 92.5f), true, 255887));
+
+            
             
             #endregion
 
@@ -554,7 +581,7 @@ namespace Drifters_Atlas {
             // Map Menu Buttons
             Menu mapMenu = new Menu("Map", Menu.MenuType.Map, mapMenuRect, 30);
             Button ugToggleButton = new Button(0, mapUgOff, mapUgOn, ref mapMenu, mapButtonClick, 0);
-            Button roomOverlayButton = new Button(1, roomOverlayOff, roomOverlayOn, ref mapMenu, mapButtonClick, 0);
+            Button roomOverlayButton = new Button(1, roomOverlayOff, roomOverlayOn, ref mapMenu, mapButtonClick, 1);
             Button moduleVisibilityButton = new Button(2, moduleVisOff, moduleMarkerUG, ref mapMenu, mapButtonClick, 1, "Modules are hidden", "Modules can only be seen in their respective layer (above/underground)", "Modules can be seen in both layers") { terImage = moduleAny };
             Button monolithVisibilityButton = new Button(3, monolithVisOff, monolithMarkerUG, ref mapMenu, mapButtonClick, 1, "Monoliths are hidden", "Monoliths can only be seen in their respective layer (above/underground)", "Monoliths can be seen in both layers") { terImage = monolithAny };
             Button gunVisibilityButton = new Button(4, gunVisOff, gunMarkerUG, ref mapMenu, mapButtonClick, 2, "Guns are hidden", "Guns can only be seen in their respective layer (above/underground)", "Guns can be seen in both layers") { terImage = gunAny };
@@ -1278,7 +1305,9 @@ namespace Drifters_Atlas {
             AbyssModule = 12,
             AbyssPillar = 13,
             
-            BossGearbit = 14
+            BossGearbit = 14,
+            
+            KeyDoor = 15 // todo: refactor this because i forgot keydoors existed
         }
         public Rectangle rect;
         public SpriteType type;
