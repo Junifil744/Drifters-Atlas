@@ -705,7 +705,7 @@ namespace Drifters_Atlas {
                         Raylib.PlaySound(menuOpenSfx);
                         Raylib.ShowCursor();
                     }
-                    if (Raylib.IsMouseButtonDown(MouseButton.Left) && lastFrameInteracted == false) {
+                    if (Raylib.IsMouseButtonDown(MouseButton.Left) && !lastFrameInteracted) {
                         lastFrameInteracted = true;
                         retTint = new Color(252, 45, 193);
                         bool valid = false;
@@ -742,7 +742,7 @@ namespace Drifters_Atlas {
                         zoom -= 0.1f;
                     }
                     if (zoom < 0.6f) zoom = 0.6f;
-                    if ((Raylib.IsKeyDown(KeyboardKey.R) || Raylib.IsKeyDown(KeyboardKey.Kp3)) && lastFrameUGSw == false) {
+                    if ((Raylib.IsKeyDown(KeyboardKey.R) || Raylib.IsKeyDown(KeyboardKey.Kp3)) && !lastFrameUGSw) {
                         underground = !underground;
                         lastFrameUGSw = true;
                         ugToggleButton.state = Convert.ToByte(underground); 
@@ -882,7 +882,7 @@ namespace Drifters_Atlas {
 
                     // Draw the map shine. // TODO: Move this to the updating area. Lots of calculations we shouldn't be doing here.
                     bool abyssOpen = true;
-                    for (int i = 1; i < 5; i++) if (spriteList[i].collected == false) abyssOpen = false;
+                    for (int i = 1; i < 5; i++) if (!spriteList[i].collected) abyssOpen = false;
                     
                     if(abyssOpen) Raylib.DrawTextureEx(
                         mapShine, 
@@ -1121,7 +1121,7 @@ namespace Drifters_Atlas {
                 button.text =
                 (string)parseSave(button.ID, "gameName") + "\n" +
                 time + "\n" +
-                DateTime.FromOADate((double)parseSave(button.ID, "dateTime")).ToString("MM/dd/yy") + " . " + difficulty;
+                DateTime.FromOADate((double)parseSave(button.ID, "dateTime")).ToString("M/d/yy") + " . " + difficulty;
             }
         }
     }
