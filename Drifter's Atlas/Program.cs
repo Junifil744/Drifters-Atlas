@@ -22,9 +22,9 @@ namespace Drifters_Atlas {
             Raylib.SetExitKey(0);
             // TODO Clean this area
             // Setup Variables
-            string v = "Indev: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version ?? "Alpha 0.4".ToString();
-            // string v = "Alpha 0.3.9558";
-            bool debug = true;
+            // string v = "Indev: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version ?? "Alpha 0.4".ToString();
+            string v = "Alpha 0.4";
+            bool debug = false;
             int currentMenu = 0;
             int windowWidth = Raylib.GetScreenWidth();
             int windowHeight = Raylib.GetScreenHeight();
@@ -869,7 +869,7 @@ namespace Drifters_Atlas {
                 }
                 else if (currentMenu == 2) {
                     helpMenu.Draw();
-                    Raylib.DrawTextEx(menuFont, "Controls\nWASD/Arrow Keys = Move\nE/Numpad1 = Zoom In\nQ/Numpad2 = Zoom out\nR/Numpad3 = Go Underground\nESC = Show pause menu\n\nTHIS IS A VERY EARLY BUILD\nI'm open to any feedback\nYou can contact me at:\nMy Discord (Junifil)\nEmail (junifil@middlemouse.click)\n\nAlpha 0.4\nBuilt October 18 2026", new Vector2(menuRect.X + (20 * menuBoxScale), menuRect.Y + (10 * menuBoxScale)), fontSize * (menuBoxScale/2.5f), -2, Color.White);
+                    Raylib.DrawTextEx(menuFont, $"Controls\nWASD/Arrow Keys = Move\nE/Numpad1 = Zoom In\nQ/Numpad2 = Zoom out\nR/Numpad3 = Go Underground\nESC = Show pause menu\n\nTHIS IS AN EARLY BUILD\nI'm open to any feedback\nYou can contact me at:\nMy Discord (Junifil)\nEmail (junifil@middlemouse.click)\n\n{v}\nBuilt November 8 2026", new Vector2(menuRect.X + (20 * menuBoxScale), menuRect.Y + (10 * menuBoxScale)), fontSize * (menuBoxScale/2.5f), -2, Color.White);
                     // TODO: CHANGE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 }
                 else if (currentMenu == 3) {

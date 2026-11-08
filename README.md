@@ -13,7 +13,7 @@ Then the controls are as follows;
 
 # Additional Info.
 THIS ISNT FINISHED!!!<br>
-Again, its an early Alpha release<br>
+Again, it's an early Alpha release<br>
 I'm open to any feedback<br>
 You can contact me at:<br>
 - My Discord (Junifil)<br>
@@ -54,7 +54,7 @@ You can contact me at:<br>
 - [X] Color sets added
 - [X] Keys added
 - [X] Key doors added
-- [ ] Module doors added
+- [X] Module doors added
 - [X] Gearbits added
 
 ### Beta 1.0 (QoL Update)
