@@ -227,7 +227,18 @@ namespace Drifters_Atlas {
             
             // Module doors
             // West
-            spriteList.Add(new MapSprite(moduleDoor3, MapSprite.SpriteType.ModuleDoor, new Vector2(-69.5f, 446), true, 8));
+            spriteList.Add(new MapSprite(moduleDoor3, MapSprite.SpriteType.ModuleDoor, new Vector2(-579.5f, -9), false, 0));
+            spriteList.Add(new MapSprite(moduleDoor8, MapSprite.SpriteType.ModuleDoor, new Vector2(-430.5f, 118), false, 1));
+            // North
+            spriteList.Add(new MapSprite(moduleDoor3, MapSprite.SpriteType.ModuleDoor, new Vector2(35.5f, -451), false, 2));
+            spriteList.Add(new MapSprite(moduleDoor8, MapSprite.SpriteType.ModuleDoor, new Vector2(45.5f, -470), false, 3));
+            // East
+            spriteList.Add(new MapSprite(moduleDoor3, MapSprite.SpriteType.ModuleDoor, new Vector2(508.5f, 15), false, 4));
+            spriteList.Add(new MapSprite(moduleDoor8, MapSprite.SpriteType.ModuleDoor, new Vector2(342.5f, -90), false, 5));
+            // South
+            spriteList.Add(new MapSprite(moduleDoor1, MapSprite.SpriteType.ModuleDoor, new Vector2(-92.5f, 432), true, 6));
+            spriteList.Add(new MapSprite(moduleDoor1, MapSprite.SpriteType.ModuleDoor, new Vector2(90.5f, 355), true, 7));
+            spriteList.Add(new MapSprite(moduleDoor8, MapSprite.SpriteType.ModuleDoor, new Vector2(80.5f, 459), false, 8));
             
             // North Monoliths
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(27, -214.5f), false, 1));
