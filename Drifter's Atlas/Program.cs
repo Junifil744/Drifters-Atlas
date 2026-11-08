@@ -1111,9 +1111,12 @@ namespace Drifters_Atlas {
 
                 string difficulty;
                 if ((double)parseSave(button.ID, "noviceMode") != 0) difficulty = "Newcomer";
-                if ((double)parseSave(button.ID, "checkHP") == 3) {
+                if ((double)parseSave(button.ID, "CH") == 1) {
                     difficulty = "New Game Alt";
                     button.image = sprADrifterTex;
+                    if ((double)parseSave(button.ID, "cape") == 11) {
+                        difficulty = "New Game Alt+";
+                    }
                 } 
                 else if ((double)parseSave(button.ID, "cape") == 11) difficulty = "New Game +";
                 else difficulty = "Standard";
