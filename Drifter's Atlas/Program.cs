@@ -225,6 +225,10 @@ namespace Drifters_Atlas {
             // South
             spriteList.Add(new MapSprite(keyDoor16, MapSprite.SpriteType.KeyDoor, new Vector2(-69.5f, 446), true, 8));
             
+            // Module doors
+            // West
+            spriteList.Add(new MapSprite(moduleDoor3, MapSprite.SpriteType.ModuleDoor, new Vector2(-69.5f, 446), true, 8));
+            
             // North Monoliths
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(27, -214.5f), false, 1));
             spriteList.Add(new MapSprite(mapMonolith, MapSprite.SpriteType.Monolith, new Vector2(110, -283.5f), false, 2));
@@ -1219,7 +1223,8 @@ namespace Drifters_Atlas {
                         rect.X + (rect.Width - Raylib.MeasureTextEx(menuFont, props[2], fontSize * (parentMenu.menuBoxScale/2.5f), -2f).X) / 2,
                         rect.Y + 90 * (parentMenu.menuBoxScale/2.5f)
                     );
-                    drifterPos = new Vector2(rect.X + rect.Width - image.Width * 3 - 30, rect.Y + rect.Height/2 - image.Height*3/2f);
+                    // TODO: simplify all of this shoehorned math. too many arbitrary values.
+                    drifterPos = new Vector2(rect.X + rect.Width - image.Width * 3 - 30 * (parentMenu.menuBoxScale/2.5f), rect.Y + rect.Height/2 - image.Height*3/2f* (parentMenu.menuBoxScale/2.5f));
                 }
             } else if (type != ButtonType.Map) {
                 textPos = new Vector2(
@@ -1261,7 +1266,7 @@ namespace Drifters_Atlas {
                     Raylib.DrawTextEx(menuFont, props[0], new Vector2(namePos.X, namePos.Y), fontSize * (parentMenu.menuBoxScale/2.5f), -2, Color.White);
                     Raylib.DrawTextEx(menuFont, props[1], new Vector2(timePos.X, timePos.Y), fontSize * (parentMenu.menuBoxScale/2.5f), -2, new Color(44, 197, 177));
                     Raylib.DrawTextEx(menuFont, props[2], new Vector2(textPos.X, textPos.Y), fontSize * (parentMenu.menuBoxScale/2.5f), -2, new Color(190, 190, 190));
-                    Raylib.DrawTextureEx(image, drifterPos, 0, 3f, Color.White);
+                    Raylib.DrawTextureEx(image, drifterPos, 0, 3f * (parentMenu.menuBoxScale/2.5f), Color.White);
                 } else {
                     Raylib.DrawTextEx(menuFont, text, new Vector2(namePos.X, namePos.Y), fontSize * (parentMenu.menuBoxScale/2.5f), -2, new Color(252, 45, 193, 136));
                 }
